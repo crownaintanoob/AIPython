@@ -19,7 +19,7 @@ class Agent:
         self.gamma = 0.9 # discount rate
         self.memory = deque(maxlen=MAX_MEMORY) # popleft()
         self.model = Linear_QNet(OtherStates + rotationAxis + RaycastsAmount, 128, InputsAmount) # [input_size, hidden_size, output_size] (8, 128, 3)
-        self.model.load_state_dict(torch.load(r'C:\Users\liong\Desktop\synapse_x\AIPythonSwordFighting\models\model.pth'))
+        self.model.load_state_dict(torch.load(r''))
         self.trainer = QTrainer(self.model, lr=LR, gamma=self.gamma)
 
 
